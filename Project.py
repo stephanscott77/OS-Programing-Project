@@ -23,8 +23,10 @@ class Customer:
 #print(cus1)
 def generateCustomer():
   for x in range(55):
-    time = 
-    cus
+    time = datetime.datetime.now()
+    cus = Customer(x, time, 0, 0, 0, 0)
+    inLine[x] = cus
+    wait()
 
 inLine = []
 outLine = []
