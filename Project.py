@@ -21,6 +21,10 @@ class Customer:
   
 #cus1 = Customer(1, 2, 3, 4)
 #print(cus1)
+def generateCustomer():
+  for x in range(55):
+    time = 
+    cus
 
 inLine = []
 outLine = []
