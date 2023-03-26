@@ -7,6 +7,11 @@
 
 import datetime
 
+inLine = []
+outLine = []
+doorIn = []
+doorOut = []
+
 class Customer:
   def __init__(cus, cusNum, arrivalTime, entryTime, shoppingTime, waitTime, exitTime):
     cus.cusNum = cusNum
@@ -28,9 +33,6 @@ def generateCustomer():
     inLine[x] = cus
     wait()
 
-inLine = []
-outLine = []
-doorIn = []
-doorOut = []
+
 
 
