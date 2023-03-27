@@ -32,7 +32,32 @@ def generateCustomer():
     cus = Customer(x, time, 0, 0, 0, 0)
     inLine[x] = cus
     wait()
+    
+class Door:
+    def __init__(self):
+        self.compartments = [None, None, None, None] # Initialize empty compartments
 
+    def add_person(self, person):
+        if None in self.compartments: # Check if there's an empty compartment
+            index = self.compartments.index(None) # Find the index of the first empty compartment
+            self.compartments[index] = person # Add person to the compartment
+            print(f"{person} added to compartment {index+1}")
+        else:
+            print("Door is already full, cannot add person")
 
+    def rotate(self):
+        if self.compartments[-1] is not None: # Check if the last compartment is occupied
+            print("Door is rotating...")
+            self.compartments = [self.compartments[-1]] + self.compartments[:-1] # Rotate the compartments
+        else:
+            print("Cannot rotate door, last compartment is empty")
+
+door = Door()
+door.add_person("Alice")
+door.add_person("Bob")
+door.add_person("Charlie")
+door.add_person("Dave")
+door.add_person("Eve") # This will not be added, since the door is already full
+door.rotate() # This will rotate the compartments
 
 
